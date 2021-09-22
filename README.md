@@ -3,8 +3,10 @@
 ## About
 
 A "Math magicians" is a website for all fans of mathematics. It is a Single Page App (SPA) that allows users to:
+
 - Make simple calculations.
 - Read a random math-related quote.
+  
 This website was built with React.
 ## Built With
 
@@ -18,7 +20,7 @@ This website was built with React.
 
 ## Pre-requisites
 
-- NodeJs (v. 14.17)
+- NodeJs
 - Git
 ## Getting Started
 
