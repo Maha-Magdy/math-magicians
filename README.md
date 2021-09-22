@@ -43,9 +43,9 @@ npm start
 
 👤 **Maha Magdy**
 
-- Github: [@Maha-Magdy](https://github.com/Maha-Magdy)
+- GitHub: [Maha-Magdy](https://github.com/Maha-Magdy)
 - Twitter: [@Maha_M_Abdelaal](https://twitter.com/Maha_M_Abdelaal)
-- Linkedin: [@maha-magdy-abdelaal](https://www.linkedin.com/in/maha-magdy-abdelaal/)
+- LinkedIn: [Maha Magdy](https://www.linkedin.com/in/maha-magdy-abdelaal/)
 
 ## 🤝 Contributing
 
