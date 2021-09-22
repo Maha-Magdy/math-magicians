@@ -5,7 +5,7 @@ export default class Calculator extends React.Component {
   render() {
     return (
       <div className="calculator-container">
-        <input type="text"></input>
+        <input type="text" placeholder="0"></input>
         <table>
           <tr>
             <td className="bg-light-gray">AC</td>

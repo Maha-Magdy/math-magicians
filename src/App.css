@@ -35,3 +35,7 @@ td {
 .bg-orange {
   background-color: #f5913e;
 }
+
+::placeholder {
+  color: white;
+}
