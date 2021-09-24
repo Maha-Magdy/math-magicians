@@ -23,9 +23,16 @@ export default class App extends React.Component {
         dataObj: calculate(state.dataObj, buttonValue),
       }),
       function () {
-        const CalculatorScreen = this.state.dataObj.next
-          ? this.state.dataObj.next
-          : this.state.dataObj.total;
+        let CalculatorScreen;
+
+        if (this.state.dataObj.next == null && this.state.dataObj.total == null) {
+          CalculatorScreen = 0;
+        } else if (this.state.dataObj.next) {
+          CalculatorScreen = this.state.dataObj.next;
+        } else {
+          CalculatorScreen = this.state.dataObj.total;
+        }
+
         this.setState({
           CalculatorScreen,
         });
