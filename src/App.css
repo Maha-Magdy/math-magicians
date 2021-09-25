@@ -1,12 +1,8 @@
-input:focus-visible {
-  outline: unset;
-}
-
 .calculator-container {
   width: 400px;
 }
 
-.calculator-container input {
+.calculator-container .calculator-screen {
   background-color: #858694;
   color: white;
   border: unset;
@@ -15,17 +11,24 @@ input:focus-visible {
   text-align: right;
 }
 
-.calculator-container input,
+.calculator-container .calculator-screen p {
+  margin: 0;
+}
+
+.calculator-container .calculator-screen,
 .calculator-container table {
   width: 100%;
 }
 
 .calculator-container table,
-td {
+td,
+th {
   border: 0.5px solid #cfcfcf;
   border-collapse: collapse;
   padding: 10px 5px;
   text-align: center;
+  cursor: pointer;
+  font-weight: 400;
 }
 
 .bg-light-gray {

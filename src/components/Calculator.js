@@ -1,77 +1,109 @@
 /* eslint-disable class-methods-use-this */
-import React from 'react';
+import { useState, useEffect } from 'react';
 import calculate from '../logic/calculate.js';
 
-export default class Calculator extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleClick = this.handleClick.bind(this);
-    this.state = {
-      dataObj: {},
-      CalculatorScreen: 0,
-    };
-  }
+export default function Calculator() {
+  const [dataObj, setDataObj] = useState({});
+  const [calculatorScreen, setCalculatorScreen] = useState(0);
 
-  handleClick = (event) => {
+  useEffect(() => {
+    let calculatorScreen;
+
+    if (dataObj.next == null && dataObj.total == null) {
+      calculatorScreen = 0;
+    } else if (dataObj.next) {
+      calculatorScreen = dataObj.next;
+    } else {
+      calculatorScreen = dataObj.total;
+    }
+
+    setCalculatorScreen(calculatorScreen);
+  }, [dataObj]);
+
+  const handleClick = (event) => {
     const buttonValue = event.target.innerText;
-    this.setState(
-      (state) => ({
-        dataObj: calculate(state.dataObj, buttonValue),
-      }),
-      function () {
-        let CalculatorScreen;
-
-        if (this.state.dataObj.next == null && this.state.dataObj.total == null) {
-          CalculatorScreen = 0;
-        } else if (this.state.dataObj.next) {
-          CalculatorScreen = this.state.dataObj.next;
-        } else {
-          CalculatorScreen = this.state.dataObj.total;
-        }
-
-        this.setState({
-          CalculatorScreen,
-        });
-      },
-    );
+    setDataObj(calculate(dataObj, buttonValue));
   };
 
-  render() {
-    return (
-      <div className="calculator-container">
-        <input type="text" value={this.state.CalculatorScreen}></input>
-        <table>
-          <tr>
-            <td className="bg-light-gray" onClick={this.handleClick}>AC</td>
-            <td className="bg-light-gray" onClick={this.handleClick}>+/-</td>
-            <td className="bg-light-gray" onClick={this.handleClick}>%</td>
-            <td className="bg-orange" onClick={this.handleClick}>÷</td>
-          </tr>
-          <tr>
-            <td className="bg-light-gray" onClick={this.handleClick}>7</td>
-            <td className="bg-light-gray" onClick={this.handleClick}>8</td>
-            <td className="bg-light-gray" onClick={this.handleClick}>9</td>
-            <td className="bg-orange" onClick={this.handleClick}>x</td>
-          </tr>
-          <tr>
-            <td className="bg-light-gray" onClick={this.handleClick}>4</td>
-            <td className="bg-light-gray" onClick={this.handleClick}>5</td>
-            <td className="bg-light-gray" onClick={this.handleClick}>6</td>
-            <td className="bg-orange" onClick={this.handleClick}>-</td>
-          </tr>
-          <tr>
-            <td className="bg-light-gray" onClick={this.handleClick}>1</td>
-            <td className="bg-light-gray" onClick={this.handleClick}>2</td>
-            <td className="bg-light-gray" onClick={this.handleClick}>3</td>
-            <td className="bg-orange" onClick={this.handleClick}>+</td>
-          </tr>
-          <tr>
-            <td className="bg-light-gray" colSpan="2" onClick={this.handleClick}>0</td>
-            <td className="bg-light-gray" onClick={this.handleClick}>.</td>
-            <td className="bg-orange" onClick={this.handleClick}>=</td>
-          </tr>
-        </table>
+  return (
+    <div className="calculator-container">
+      <div className="calculator-screen">
+        <p>{calculatorScreen}</p>
       </div>
-    );
-  }
+      <table>
+        <thead>
+        <tr>
+          <th className="bg-light-gray" onClick={handleClick}>
+            AC
+          </th>
+          <th className="bg-light-gray" onClick={handleClick}>
+            +/-
+          </th>
+          <th className="bg-light-gray" onClick={handleClick}>
+            %
+          </th>
+          <th className="bg-orange" onClick={handleClick}>
+            ÷
+          </th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr>
+          <td className="bg-light-gray" onClick={handleClick}>
+            7
+          </td>
+          <td className="bg-light-gray" onClick={handleClick}>
+            8
+          </td>
+          <td className="bg-light-gray" onClick={handleClick}>
+            9
+          </td>
+          <th className="bg-orange" onClick={handleClick}>
+            x
+          </th>
+        </tr>
+        <tr>
+          <td className="bg-light-gray" onClick={handleClick}>
+            4
+          </td>
+          <td className="bg-light-gray" onClick={handleClick}>
+            5
+          </td>
+          <td className="bg-light-gray" onClick={handleClick}>
+            6
+          </td>
+          <th className="bg-orange" onClick={handleClick}>
+            -
+          </th>
+        </tr>
+        <tr>
+          <td className="bg-light-gray" onClick={handleClick}>
+            1
+          </td>
+          <td className="bg-light-gray" onClick={handleClick}>
+            2
+          </td>
+          <td className="bg-light-gray" onClick={handleClick}>
+            3
+          </td>
+          <th className="bg-orange" onClick={handleClick}>
+            +
+          </th>
+        </tr>
+        <tr>
+          <td className="bg-light-gray" colSpan="2" onClick={handleClick}>
+            0
+          </td>
+          <td className="bg-light-gray" onClick={handleClick}>
+            .
+          </td>
+          <th className="bg-orange" onClick={handleClick}>
+            =
+          </th>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  );
 }
