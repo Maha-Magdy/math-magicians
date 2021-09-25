@@ -27,22 +27,28 @@ export default function Calculator() {
 
   return (
     <div className="calculator-container">
-      <input type="text" value={calculatorScreen}></input>
+      <div className="calculator-screen">
+        <p>{calculatorScreen}</p>
+      </div>
       <table>
+        <thead>
         <tr>
-          <td className="bg-light-gray" onClick={handleClick}>
+          <th className="bg-light-gray" onClick={handleClick}>
             AC
-          </td>
-          <td className="bg-light-gray" onClick={handleClick}>
+          </th>
+          <th className="bg-light-gray" onClick={handleClick}>
             +/-
-          </td>
-          <td className="bg-light-gray" onClick={handleClick}>
+          </th>
+          <th className="bg-light-gray" onClick={handleClick}>
             %
-          </td>
-          <td className="bg-orange" onClick={handleClick}>
+          </th>
+          <th className="bg-orange" onClick={handleClick}>
             ÷
-          </td>
+          </th>
         </tr>
+        </thead>
+
+        <tbody>
         <tr>
           <td className="bg-light-gray" onClick={handleClick}>
             7
@@ -53,9 +59,9 @@ export default function Calculator() {
           <td className="bg-light-gray" onClick={handleClick}>
             9
           </td>
-          <td className="bg-orange" onClick={handleClick}>
+          <th className="bg-orange" onClick={handleClick}>
             x
-          </td>
+          </th>
         </tr>
         <tr>
           <td className="bg-light-gray" onClick={handleClick}>
@@ -67,9 +73,9 @@ export default function Calculator() {
           <td className="bg-light-gray" onClick={handleClick}>
             6
           </td>
-          <td className="bg-orange" onClick={handleClick}>
+          <th className="bg-orange" onClick={handleClick}>
             -
-          </td>
+          </th>
         </tr>
         <tr>
           <td className="bg-light-gray" onClick={handleClick}>
@@ -81,9 +87,9 @@ export default function Calculator() {
           <td className="bg-light-gray" onClick={handleClick}>
             3
           </td>
-          <td className="bg-orange" onClick={handleClick}>
+          <th className="bg-orange" onClick={handleClick}>
             +
-          </td>
+          </th>
         </tr>
         <tr>
           <td className="bg-light-gray" colSpan="2" onClick={handleClick}>
@@ -92,10 +98,11 @@ export default function Calculator() {
           <td className="bg-light-gray" onClick={handleClick}>
             .
           </td>
-          <td className="bg-orange" onClick={handleClick}>
+          <th className="bg-orange" onClick={handleClick}>
             =
-          </td>
+          </th>
         </tr>
+        </tbody>
       </table>
     </div>
   );
