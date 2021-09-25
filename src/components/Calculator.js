@@ -1,5 +1,5 @@
 /* eslint-disable class-methods-use-this */
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import calculate from '../logic/calculate.js';
 
 export default function Calculator() {
