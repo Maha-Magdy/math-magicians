@@ -1,5 +1,6 @@
 .calculator-container {
   width: 400px;
+  margin: 25px 0;
 }
 
 .calculator-container .calculator-screen {
@@ -39,6 +40,30 @@ th {
   background-color: #f5913e;
 }
 
+.color-orange {
+  color: #f5913e;
+}
+
 ::placeholder {
   color: white;
+}
+
+.App {
+  padding: 10px 25px;
+  position: relative;
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+}
+
+header ul li {
+  padding: 0 10px;
 }
