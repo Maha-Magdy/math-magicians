@@ -39,6 +39,12 @@ cd egyptian-food-world
 npm install
 npm start
 ```
+## Netlify Live Demo
+[Netlify Live Demo Link]( https://math-magicians-app.netlify.app/ )
+
+## Heroku Live Demo
+[Heroku Live Demo Link]( https://math-magicians-app.netlify.app/ )
+
 ## Author
 
 👤 **Maha Magdy**
