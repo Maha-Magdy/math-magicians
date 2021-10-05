@@ -1,0 +1,69 @@
+.calculator-container {
+  width: 400px;
+  margin: 25px 0;
+}
+
+.calculator-container .calculator-screen {
+  background-color: #858694;
+  color: white;
+  border: unset;
+  padding: 10px 5px;
+  box-sizing: border-box;
+  text-align: right;
+}
+
+.calculator-container .calculator-screen p {
+  margin: 0;
+}
+
+.calculator-container .calculator-screen,
+.calculator-container table {
+  width: 100%;
+}
+
+.calculator-container table,
+td,
+th {
+  border: 0.5px solid #cfcfcf;
+  border-collapse: collapse;
+  padding: 10px 5px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.bg-light-gray {
+  background-color: #e0e0e0;
+}
+
+.bg-orange {
+  background-color: #f5913e;
+}
+
+.color-orange {
+  color: #f5913e;
+}
+
+::placeholder {
+  color: white;
+}
+
+.App {
+  padding: 10px 25px;
+  position: relative;
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+}
+
+header ul li {
+  padding: 0 10px;
+}
