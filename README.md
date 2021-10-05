@@ -43,7 +43,7 @@ npm start
 [Netlify Live Demo Link]( https://math-magicians-app.netlify.app/ )
 
 ## Heroku Live Demo
-[Heroku Live Demo Link]( https://math-magicians-app.netlify.app/ )
+[Heroku Live Demo Link]( https://math-magicians-demo.herokuapp.com/ )
 
 ## Author
 
