@@ -35,7 +35,7 @@ git clone https://github.com/Maha-Magdy/math-magicians.git
 
 2. Now that you have already cloned the repo run the following commands to get the project up and running:
 ```sh
-cd egyptian-food-world
+cd math-magicians
 npm install
 npm start
 ```
